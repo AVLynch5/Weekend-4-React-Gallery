@@ -63,7 +63,7 @@ function App() {
               <div className="post-content" onClick={() => handleImgDescToggle()}>
                 {showImage ? (<img src={post.path} />) : (<p>{post.description}</p>)}
               </div>
-              <button onClick={() => handlePostLike()}>Like Post</button>
+              <button onClick={() => handlePostLike(post.id)}>Like Post</button>
             </div>
         ))}
       </div>
