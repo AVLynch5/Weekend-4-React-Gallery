@@ -44,5 +44,19 @@ router.delete('/:id', (req, res) => {
     })
 });//End DELETE route
 
+//POST route - add new post to gallery
+router.post('/', (req, res) => {
+    const post = req.body;
+    const queryText = `INSERT INTO "posts" ("description", "path")
+                       VALUES ($1, $2)`;
+    pool.query(queryText, [post.description, post.path]).then((result) => {
+        console.log('Added new post to the gallery', post);
+        res.sendStatus(201);
+    }).catch((error) => {
+        console.log('Error adding new post to gallery', error);
+        res.sendStatus(500);
+    })
+})
+
 
 module.exports = router;
