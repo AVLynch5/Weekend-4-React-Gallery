@@ -17,4 +17,4 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] GET function
 - [x] RENDER function with .map
 - [ ] PUT function to increase "likes" with button
-- [ ] conditional rendering - show photo vs show description on click
+- [x] conditional rendering - show photo vs show description on click
