@@ -9,7 +9,7 @@ Your project description goes here. What problem did you solve? How did you solv
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 ## Checklist
-- [ ] Database creation and data config, move to database.sql
+- [x] Database creation and data config, move to database.sql
 - [ ] Create REST methods in gallery.router.js
 - [ ] Create pool.js and install PG
 - [ ] basic HTML page styling in app.jsx
