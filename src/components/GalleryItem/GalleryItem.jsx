@@ -1,4 +1,6 @@
-function GalleryItem({post, setShowImage, putLikePost, deletePost}) {
+import {useState} from 'react';
+
+function GalleryItem({post, putLikePost, deletePost}) {
     const [showImage, setShowImage] = useState(true);
     const handleImgDescToggle = () => {
         console.log('Post clicked - toggle');
