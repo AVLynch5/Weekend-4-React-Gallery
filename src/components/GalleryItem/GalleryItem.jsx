@@ -1,4 +1,4 @@
-function GalleryItem() {
+function GalleryItem({post, setShowImage, putLikePost, deletePost}) {
     const handleImgDescToggle = () => {
         console.log('Post clicked - toggle');
         setShowImage(!showImage);
