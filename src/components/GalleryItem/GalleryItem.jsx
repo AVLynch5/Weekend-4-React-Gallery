@@ -1,5 +1,16 @@
 function GalleryItem() {
-    
+    const handleImgDescToggle = () => {
+        console.log('Post clicked - toggle');
+        setShowImage(!showImage);
+    }
+    const handlePostLike = (postId, postLikes) => {
+        console.log('User liked post with postId', postId);
+        putLikePost(postId, postLikes);
+    }
+    const handlePostDelete = (postId) => {
+        console.log('User deleted post with ID', postId);
+        deletePost(postId);
+    }
     
     return(
         <div className="post-container" key={post.id}>

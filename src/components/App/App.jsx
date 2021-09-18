@@ -29,16 +29,6 @@ function App() {
     })
   }
 
-  const handleImgDescToggle = () => {
-    console.log('Post clicked - toggle');
-    setShowImage(!showImage);
-  }
-
-  const handlePostLike = (postId, postLikes) => {
-    console.log('User liked post with postId', postId);
-    putLikePost(postId, postLikes);
-  }
-
   const putLikePost = (postId, postLikes) => {
     axios({
       method: 'PUT',
@@ -49,11 +39,6 @@ function App() {
     }).catch((error) => {
       console.log(error);
     })
-  }
-
-  const handlePostDelete = (postId) => {
-    console.log('User deleted post with ID', postId);
-    deletePost(postId);
   }
 
   const deletePost = (postId) => {
