@@ -9,8 +9,18 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <div className="Subheader">
+          <h3 className="subheader-title">Picture Gallery</h3>
+        </div>
+        <div className="gallery-container">
+          <h4>.map with child divs here</h4>
+        </div>
+        <div className="Subheader">
+          <h3 className="subheader-title">Add a New Post</h3>
+        </div>
+        <div className="galleryform-container">
+          <h4>form with inputs and add post button here</h4>
+        </div>
       </div>
     );
 }
