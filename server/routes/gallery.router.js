@@ -17,6 +17,12 @@ router.put('/like/:id', (req, res) => {
     res.sendStatus(200);
 }); // END PUT Route
 
+//Put route - increase number of likes
+router.put('/like/:id', (req, res) => {
+    const postId = req.params.id;
+    const queryText = `UPDATE "posts" SET "likes" `;
+})
+
 // GET Route - modified to GET gallery photos from DB
 router.get('/', (req, res) => {
     const queryText = `SELECT * FROM "posts" ORDER BY "likes" DESC;`;
