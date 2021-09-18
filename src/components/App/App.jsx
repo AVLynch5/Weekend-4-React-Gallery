@@ -66,6 +66,20 @@ function App() {
     })
   }
 
+  const addPost = (event) => {
+    event.preventDefault();
+    console.log('Submitted form to add new post');
+    axios({
+      method: 'POST',
+      url: '/gallery',
+      data: {description: newPostDescription, path: newPostPath},
+    }).then((response) => {
+      getGallery();
+    }).catch((error) => {
+      console.log(error);
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -90,7 +104,11 @@ function App() {
         <h3 className="subheader-title">Add a New Post</h3>
       </div>
       <div className="galleryform-container">
-        <h4>form with inputs and add post button here</h4>
+        <form onSubmit={addPost}>
+          <input id="description" onChange={(event) => setNewPostDescription(event.target.value)}/>
+          <input id="path" onChange={(event) => setNewPostPath(event.target.value)}/>
+          <button type="submit">Add New Post</button>
+        </form>
       </div>
     </div>
   );
