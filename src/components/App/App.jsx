@@ -11,7 +11,6 @@ function App() {
   const [postList, setPostList] = useState([]);
   const [newPostDescription, setNewPostDescription] = useState('');
   const [newPostPath, setNewPostPath] = useState('');
-  const [showImage, setShowImage] = useState(true);
 
   //Page Ready - Calls GET function on page load
   useEffect(() => {
