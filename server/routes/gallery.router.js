@@ -3,24 +3,20 @@ const router = express.Router();
 const pool = require('../modules/pool.js');
 const galleryItems = require('../modules/gallery.data');
 
-// DO NOT MODIFY THIS FILE FOR BASE MODE
-
-// PUT Route
-router.put('/like/:id', (req, res) => {
-    console.log(req.params);
-    const galleryId = req.params.id;
-    for(const galleryItem of galleryItems) {
-        if(galleryItem.id == galleryId) {
-            galleryItem.likes += 1;
-        }
-    }
-    res.sendStatus(200);
-}); // END PUT Route
+// DO NOT MODIFY THIS FILE FOR BASE MODE - sorry but IMMA MODIFY 
 
 //Put route - increase number of likes
 router.put('/like/:id', (req, res) => {
     const postId = req.params.id;
-    const queryText = `UPDATE "posts" SET "likes" `;
+    const newLikes = parseInt(req.body.likes)+1;
+    const queryText = `UPDATE "posts" SET "likes" = $1 WHERE "id" = $2;`;
+    pool.query(queryText, [newLikes, postId]).then((result) => {
+        console.log('PUT - updated likes to', newLikes);
+        res.sendStatus(201);
+    }).catch((error) => {
+        console.log('Error updating likes for post with ID', postId);
+        res.sendStatus(500);
+    })
 })
 
 // GET Route - modified to GET gallery photos from DB
