@@ -17,7 +17,7 @@ router.put('/like/:id', (req, res) => {
         console.log('Error updating likes for post with ID', postId);
         res.sendStatus(500);
     })
-})
+});//End PUT route
 
 // GET Route - modified to GET gallery photos from DB
 router.get('/', (req, res) => {
@@ -30,5 +30,19 @@ router.get('/', (req, res) => {
         res.sendStatus(500);
     })
 }); // END GET Route
+
+//DELETE Route - delete post from gallery
+router.delete('/:id', (req, res) => {
+    const postId = req.params.id;
+    const queryText = `DELETE FROM "posts" WHERE "id" = $1;`;
+    pool.query(queryText, [postId]).then((result) => {
+        console.log('DELETE - removed post with ID', postId);
+        res.sendStatus(201);
+    }).catch((error) => {
+        console.log('Error deleting post with ID', postId);
+        res.sendStatus(500);
+    })
+});//End DELETE route
+
 
 module.exports = router;
