@@ -33,15 +33,16 @@ function App() {
     setShowImage(!showImage);
   }
 
-  const handlePostLike = (postId) => {
+  const handlePostLike = (postId, postLikes) => {
     console.log('User liked post with postId', postId);
-    putLikePost(postId);
+    putLikePost(postId, postLikes);
   }
 
-  const putLikePost = (postId) => {
+  const putLikePost = (postId, postLikes) => {
     axios({
       method: 'PUT',
       url: `/gallery/like/${postId}`,
+      data: {likes: postLikes},
     }).then((response) => {
       getGallery();
     }).catch((error) => {
@@ -64,7 +65,7 @@ function App() {
                 {showImage ? (<img src={post.path} />) : (<p>{post.description}</p>)}
               </div>
               <p>This post has {post.likes} likes</p>
-              <button onClick={() => handlePostLike(post.id)}>Like Post</button>
+              <button onClick={() => handlePostLike(post.id, post.likes)}>Like Post</button>
             </div>
         ))}
       </div>
