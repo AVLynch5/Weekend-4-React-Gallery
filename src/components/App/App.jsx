@@ -50,6 +50,22 @@ function App() {
     })
   }
 
+  const handlePostDelete = (postId) => {
+    console.log('User deleted post with ID', postId);
+    deletePost(postId);
+  }
+
+  const deletePost = (postId) => {
+    axios({
+      method: 'DELETE',
+      url: `/gallery/${postId}`,
+    }).then((response) => {
+      getGallery();
+    }).catch((error) => {
+      console.log(error);
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -66,6 +82,7 @@ function App() {
               </div>
               <p>This post has {post.likes} likes</p>
               <button onClick={() => handlePostLike(post.id, post.likes)}>Like Post</button>
+              <button onClick={() => handlePostDelete(post.id)}>Delete Post</button>
             </div>
         ))}
       </div>
