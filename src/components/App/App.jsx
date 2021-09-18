@@ -80,6 +80,8 @@ function App() {
         addPost={addPost}
         setNewPostDescription={setNewPostDescription}
         setNewPostPath={setNewPostPath}
+        newPostDescription={newPostDescription}
+        newPostPath={newPostPath}
       />
     </div>
   );
