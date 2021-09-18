@@ -21,8 +21,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] DELETE function w/ axios PLUS handling function called on button click
 - [x] POST function w/axios called on form submit w/ submit button
 - [x] Break down app.jsx into components - galleryForm, galleryList, galleryItem, etc
-- [ ] Clear form inputs on form submit/new post
-- [ ] add placeholders to form inputs
+- [x] Clear form inputs on form submit/new post
+- [x] add placeholders to form inputs
 - [ ] Change path -> relative to absolute
 - [ ] Conditional/checks at post addition - no fields left empty (alert), must be text
 - [ ] sweet alerts - alert for post entry and post deletion
