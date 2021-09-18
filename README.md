@@ -11,7 +11,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 ## Checklist
 - [x] Database creation and data config, move to database.sql
 - [ ] Create REST methods in gallery.router.js
-- [ ] Create pool.js and install PG
+- [x] Create pool.js and install PG
 - [ ] basic HTML page styling in app.jsx
 - [ ] Declare postList const and newPost const with set functions in app.jsx
 - [ ] GET function
