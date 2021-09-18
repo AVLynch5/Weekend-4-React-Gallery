@@ -33,6 +33,22 @@ function App() {
     setShowImage(!showImage);
   }
 
+  const handlePostLike = (postId) => {
+    console.log('User liked post with postId', postId);
+    putLikePost(postId);
+  }
+
+  const putLikePost = (postId) => {
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${postId}`,
+    }).then((response) => {
+      getGallery();
+    }).catch((error) => {
+      console.log(error);
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -47,6 +63,7 @@ function App() {
               <div className="post-content" onClick={() => handleImgDescToggle()}>
                 {showImage ? (<img src={post.path} />) : (<p>{post.description}</p>)}
               </div>
+              <button onClick={() => handlePostLike()}>Like Post</button>
             </div>
         ))}
       </div>
