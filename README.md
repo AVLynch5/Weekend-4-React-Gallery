@@ -27,4 +27,4 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [ ] Conditional/checks at post addition - no fields left empty (alert), must be text
 - [ ] sweet alerts - alert for post entry and post deletion
 - [ ] STYLING
-- [ ] Warning - child unique key warning in console...why is this happening?
+- [x] Warning - child unique key warning in console...why is this happening?
