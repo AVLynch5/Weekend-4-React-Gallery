@@ -1,6 +1,6 @@
 function GalleryForm({addPost, setNewPostDescription, setNewPostPath, newPostDescription, newPostPath}) {
-    const handleAddPost = () => {
-        addPost();
+    const handleAddPost = (event) => {
+        addPost(event);
         setNewPostDescription('');
         setNewPostPath('');
     }
