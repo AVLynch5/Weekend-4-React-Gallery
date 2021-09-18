@@ -9,6 +9,7 @@ function GalleryList({list, deletePost, putLikePost}) {
             <div className="gallery-container">
                 {list.map(post => 
                     (<GalleryItem
+                        key={post.id}
                         post={post}
                         putLikePost={putLikePost}
                         deletePost={deletePost}

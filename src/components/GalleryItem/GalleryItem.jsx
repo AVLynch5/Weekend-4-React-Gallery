@@ -16,7 +16,7 @@ function GalleryItem({post, putLikePost, deletePost}) {
     }
     
     return(
-        <div key={post.id} className="post-container">
+        <div className="post-container">
             <div className="post-content" onClick={() => handleImgDescToggle()}>
                 {showImage ? (<img src={post.path} />) : (<p>{post.description}</p>)}
             </div>
