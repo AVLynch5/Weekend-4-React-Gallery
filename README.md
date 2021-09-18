@@ -20,10 +20,11 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] conditional rendering - show photo vs show description on click
 - [x] DELETE function w/ axios PLUS handling function called on button click
 - [x] POST function w/axios called on form submit w/ submit button
-- [ ] Break down app.jsx into components - galleryForm, galleryList, galleryItem, etc
+- [x] Break down app.jsx into components - galleryForm, galleryList, galleryItem, etc
 - [ ] Clear form inputs on form submit/new post
 - [ ] add placeholders to form inputs
 - [ ] Change path -> relative to absolute
 - [ ] Conditional/checks at post addition - no fields left empty (alert), must be text
 - [ ] sweet alerts - alert for post entry and post deletion
 - [ ] STYLING
+- [ ] Warning - child unique key warning in console...why is this happening?
