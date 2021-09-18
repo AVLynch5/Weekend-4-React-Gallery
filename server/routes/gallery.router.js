@@ -17,9 +17,16 @@ router.put('/like/:id', (req, res) => {
     res.sendStatus(200);
 }); // END PUT Route
 
-// GET Route
+// GET Route - modified to GET gallery photos from DB
 router.get('/', (req, res) => {
-    res.send(galleryItems);
+    const queryText = `SELECT * FROM "posts" ORDER BY "likes" DESC;`;
+    pool.query(queryText).then((result) => {
+        console.log('Retrieved gallery from the DB', result);
+        res.send(result.rows);
+    }).catch((error) => {
+        console.log('Error during GET DB query', error);
+        res.sendStatus(500);
+    })
 }); // END GET Route
 
 module.exports = router;
