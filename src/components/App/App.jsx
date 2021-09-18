@@ -36,7 +36,13 @@ function App() {
           <h3 className="subheader-title">Picture Gallery</h3>
         </div>
         <div className="gallery-container">
-          <h4>.map with child divs here</h4>
+          {postList.map(post => (
+              <div className="post-container" key={post.id}>
+                <div className="post-content">
+                  <img src={post.path} />
+                </div>
+              </div>
+          ))}
         </div>
         <div className="Subheader">
           <h3 className="subheader-title">Add a New Post</h3>
