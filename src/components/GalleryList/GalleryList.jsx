@@ -13,7 +13,7 @@ function GalleryList({list, deletePost, putLikePost}) {
                     direction="row"
                     justifyContent="center"
                     alignItems="center"
-                    spacing={1}
+                    spacing={2}
                 >
                     {list.map(post => 
                         <Grid

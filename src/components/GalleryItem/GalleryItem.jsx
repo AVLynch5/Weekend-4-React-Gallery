@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './GalleryItem.css';
 //MaterialUI
 import Button from '@mui/material/Button';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
@@ -21,9 +22,9 @@ function GalleryItem({post, putLikePost, deletePost}) {
     }
     
     return(
-        <Box className="post-container" border={3} borderColor="black" pt={2} width={200} height={250}>
+        <Box className="post-container" border={3} borderColor="black" pt={2} width={250} height={300}>
             <div className="post-content" onClick={() => handleImgDescToggle()}>
-                {showImage ? (<img src={post.path} />) : (<p>{post.description}</p>)}
+                {showImage ? (<img className="image-sizing" src={post.path} />) : (<p>{post.description}</p>)}
             </div>
             <p>This post has {post.likes} likes</p>
             <Button size="small" variant="contained" endIcon={<ThumbUpAltIcon fontSize="small"/>} onClick={() => handlePostLike(post.id, post.likes)}>Like</Button>
