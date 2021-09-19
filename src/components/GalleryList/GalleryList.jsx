@@ -1,5 +1,4 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 
 function GalleryList({list, deletePost, putLikePost}) {
@@ -8,26 +7,29 @@ function GalleryList({list, deletePost, putLikePost}) {
             <div className="Subheader">
                 <h3 className="subheader-title">Picture Gallery</h3>
             </div>
-            <Container>
-                <div className="gallery-container">
+            <div className="gallery-container">
                 <Grid
                     container
                     direction="row-reverse"
                     justifyContent="center"
                     alignItems="center"
-                    spacing={4}
+                    spacing={2}
                 >
                     {list.map(post => 
-                        (<GalleryItem
+                        <Grid
+                            item
+                            xs={2}
+                        >
+                            <GalleryItem
                             key={post.id}
                             post={post}
                             putLikePost={putLikePost}
                             deletePost={deletePost}
-                        />)
+                            />
+                        </Grid>
                     )}
                 </Grid>
-                </div>
-            </Container>
+            </div>
         </>
     );
 }
