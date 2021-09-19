@@ -24,7 +24,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] Clear form inputs on form submit/new post
 - [x] add placeholders to form inputs
 - [ ] Change path -> relative to absolute (idea-include file upload button - see MUI example - and have a file upload button PLUS HTML input field)
-- [ ] Conditional/checks at post addition - no fields left empty (alert), must be text (upload button idea - require url input OR file upload)
+- [ ] Conditional/checks at post addition - no fields left empty (alert), must be text (upload button idea - require url input OR file upload)... not super necessary with textfield required props
 - [ ] MUI alerts - alert for post entry and post deletion
-- [ ] STYLING - look into MUI - start w/ buttons and layout, then required input fields!
+- [ ] STYLING - look into MUI - start w/ buttons and layout, then required input fields! BIG ISSUES - standardizing image sizing, centering gallery-container/MUI container w/in page (w/o CSS)
 - [x] Warning - child unique key warning in console...why is this happening?
