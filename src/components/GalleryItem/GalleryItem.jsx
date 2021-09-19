@@ -1,6 +1,8 @@
 import {useState} from 'react';
 //MaterialUI
 import Button from '@mui/material/Button';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 
 function GalleryItem({post, putLikePost, deletePost}) {
     const [showImage, setShowImage] = useState(true);
@@ -23,8 +25,8 @@ function GalleryItem({post, putLikePost, deletePost}) {
                 {showImage ? (<img src={post.path} />) : (<p>{post.description}</p>)}
             </div>
             <p>This post has {post.likes} likes</p>
-            <button onClick={() => handlePostLike(post.id, post.likes)}>Like Post</button>
-            <button variant="outlined" startIcon={<DeleteIcon />} onClick={() => handlePostDelete(post.id)}>Delete Post</button>
+            <Button variant="contained" endIcon={<ThumbUpAltIcon />} onClick={() => handlePostLike(post.id, post.likes)}>Like Post</Button>
+            <Button variant="outlined" startIcon={<DeleteOutlineOutlinedIcon />} onClick={() => handlePostDelete(post.id)}>Delete Post</Button>
         </div>
     );
 }
