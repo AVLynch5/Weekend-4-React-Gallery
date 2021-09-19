@@ -1,5 +1,6 @@
 //MUI
 import Button from '@mui/material/Button';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 
 function GalleryForm({addPost, setNewPostDescription, setNewPostPath, newPostDescription, newPostPath}) {
@@ -18,7 +19,7 @@ function GalleryForm({addPost, setNewPostDescription, setNewPostPath, newPostDes
             <form onSubmit={handleAddPost}>
                 <input value={newPostDescription} id="description" placeholder="Image Description" onChange={(event) => setNewPostDescription(event.target.value)}/>
                 <input value={newPostPath} id="path" placeholder="Image Path" onChange={(event) => setNewPostPath(event.target.value)}/>
-                <button type="submit">Add New Post</button>
+                <Button variant="contained" endIcon={<AddCircleIcon />} type="submit">Add New Post</Button>
             </form>
         </div>
         </>
