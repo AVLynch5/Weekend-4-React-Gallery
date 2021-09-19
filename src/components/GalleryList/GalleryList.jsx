@@ -10,7 +10,7 @@ function GalleryList({list, deletePost, putLikePost}) {
             <div className="gallery-container">
                 <Grid
                     container
-                    direction="row-reverse"
+                    direction="row"
                     justifyContent="center"
                     alignItems="center"
                     spacing={1}
