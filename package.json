@@ -4,6 +4,9 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "axios": "^0.19.2",
     "express": "^4.17.1",

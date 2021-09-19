@@ -24,7 +24,7 @@ function GalleryItem({post, putLikePost, deletePost}) {
             </div>
             <p>This post has {post.likes} likes</p>
             <button onClick={() => handlePostLike(post.id, post.likes)}>Like Post</button>
-            <button onClick={() => handlePostDelete(post.id)}>Delete Post</button>
+            <button variant="outlined" startIcon={<DeleteIcon />} onClick={() => handlePostDelete(post.id)}>Delete Post</button>
         </div>
     );
 }
