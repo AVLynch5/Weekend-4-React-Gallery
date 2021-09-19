@@ -20,7 +20,7 @@ function GalleryForm({addPost, setNewPostDescription, setNewPostPath, newPostDes
             <form onSubmit={handleAddPost}>
                 <TextField required size="small" value={newPostDescription} id="description" label="Image Description" onChange={(event) => setNewPostDescription(event.target.value)}/>
                 <TextField required size="small" value={newPostPath} id="path" label="Image Path" onChange={(event) => setNewPostPath(event.target.value)}/>
-                <Button size="medium" variant="contained" endIcon={<AddCircleIcon fontSize="small"/>} type="submit">Add Post</Button>
+                <Button style={{height: 39}} variant="contained" endIcon={<AddCircleIcon fontSize="small"/>} type="submit">Add Post</Button>
             </form>
         </div>
         </>
