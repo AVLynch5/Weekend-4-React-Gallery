@@ -25,8 +25,8 @@ function GalleryItem({post, putLikePost, deletePost}) {
                 {showImage ? (<img src={post.path} />) : (<p>{post.description}</p>)}
             </div>
             <p>This post has {post.likes} likes</p>
-            <Button variant="contained" endIcon={<ThumbUpAltIcon />} onClick={() => handlePostLike(post.id, post.likes)}>Like Post</Button>
-            <Button variant="outlined" startIcon={<DeleteOutlineOutlinedIcon />} onClick={() => handlePostDelete(post.id)}>Delete Post</Button>
+            <Button size="small" variant="contained" endIcon={<ThumbUpAltIcon fontSize="small"/>} onClick={() => handlePostLike(post.id, post.likes)}>Like</Button>
+            <Button size="small" variant="outlined" startIcon={<DeleteOutlineOutlinedIcon fontSize="small"/>} onClick={() => handlePostDelete(post.id)}>Delete</Button>
         </div>
     );
 }
