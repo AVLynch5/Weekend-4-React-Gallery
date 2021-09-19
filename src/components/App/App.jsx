@@ -72,7 +72,7 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <Container>
+      <Container sx={{mx: 'auto'}}>
         <GalleryList
           list={postList}
           deletePost={deletePost}
