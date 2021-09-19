@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import GalleryForm from '../GalleryForm/GalleryForm';
 import GalleryList from '../GalleryList/GalleryList';
+import Container from '@mui/material/Container';
 
 function App() {
 
@@ -71,18 +72,20 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryList
-        list={postList}
-        deletePost={deletePost}
-        putLikePost={putLikePost}
-      />
-      <GalleryForm
-        addPost={addPost}
-        setNewPostDescription={setNewPostDescription}
-        setNewPostPath={setNewPostPath}
-        newPostDescription={newPostDescription}
-        newPostPath={newPostPath}
-      />
+      <Container>
+        <GalleryList
+          list={postList}
+          deletePost={deletePost}
+          putLikePost={putLikePost}
+        />
+        <GalleryForm
+          addPost={addPost}
+          setNewPostDescription={setNewPostDescription}
+          setNewPostPath={setNewPostPath}
+          newPostDescription={newPostDescription}
+          newPostPath={newPostPath}
+        />
+      </Container>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
 
 function GalleryList({list, deletePost, putLikePost}) {
     return(
