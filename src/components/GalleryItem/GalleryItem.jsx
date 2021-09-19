@@ -1,4 +1,6 @@
 import {useState} from 'react';
+//MaterialUI
+import Button from '@mui/material/Button';
 
 function GalleryItem({post, putLikePost, deletePost}) {
     const [showImage, setShowImage] = useState(true);
