@@ -23,8 +23,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] Break down app.jsx into components - galleryForm, galleryList, galleryItem, etc
 - [x] Clear form inputs on form submit/new post
 - [x] add placeholders to form inputs
-- [ ] Change path -> relative to absolute
-- [ ] Conditional/checks at post addition - no fields left empty (alert), must be text
+- [ ] Change path -> relative to absolute (idea-include file upload button - see MUI example - and have a file upload button PLUS HTML input field)
+- [ ] Conditional/checks at post addition - no fields left empty (alert), must be text (upload button idea - require url input OR file upload)
 - [ ] sweet alerts - alert for post entry and post deletion
-- [ ] STYLING
+- [ ] STYLING - look into MUI
 - [x] Warning - child unique key warning in console...why is this happening?
