@@ -1,7 +1,8 @@
 //MUI
 import Button from '@mui/material/Button';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-
+import TextField from '@mui/material/TextField';
+import Alert from '@mui/material/Alert';
 
 function GalleryForm({addPost, setNewPostDescription, setNewPostPath, newPostDescription, newPostPath}) {
     const handleAddPost = (event) => {
@@ -17,9 +18,9 @@ function GalleryForm({addPost, setNewPostDescription, setNewPostPath, newPostDes
         </div>
         <div className="galleryform-container">
             <form onSubmit={handleAddPost}>
-                <input value={newPostDescription} id="description" placeholder="Image Description" onChange={(event) => setNewPostDescription(event.target.value)}/>
-                <input value={newPostPath} id="path" placeholder="Image Path" onChange={(event) => setNewPostPath(event.target.value)}/>
-                <Button size="small" variant="contained" endIcon={<AddCircleIcon fontSize="small"/>} type="submit">Add Post</Button>
+                <TextField required size="small" value={newPostDescription} id="description" label="Image Description" onChange={(event) => setNewPostDescription(event.target.value)}/>
+                <TextField required size="small" value={newPostPath} id="path" label="Image Path" onChange={(event) => setNewPostPath(event.target.value)}/>
+                <Button size="medium" variant="contained" endIcon={<AddCircleIcon fontSize="small"/>} type="submit">Add Post</Button>
             </form>
         </div>
         </>
