@@ -1,3 +1,7 @@
+//MUI
+import Button from '@mui/material/Button';
+
+
 function GalleryForm({addPost, setNewPostDescription, setNewPostPath, newPostDescription, newPostPath}) {
     const handleAddPost = (event) => {
         addPost(event);
