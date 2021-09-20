@@ -5,7 +5,7 @@ const galleryItems = require('../modules/gallery.data');
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE - sorry but IMMA MODIFY 
 
-//Put route - increase number of likes
+//Put route - increase number of likes using id (sent by route) and #likes (sent via axios call)
 router.put('/like/:id', (req, res) => {
     const postId = req.params.id;
     const newLikes = parseInt(req.body.likes)+1;
@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
     })
 }); // END GET Route
 
-//DELETE Route - delete post from gallery
+//DELETE Route - delete post from gallery using ID sent via route params
 router.delete('/:id', (req, res) => {
     const postId = req.params.id;
     const queryText = `DELETE FROM "posts" WHERE "id" = $1;`;
@@ -44,7 +44,7 @@ router.delete('/:id', (req, res) => {
     })
 });//End DELETE route
 
-//POST route - add new post to gallery
+//POST route - add new post to gallery using data sent via axios call
 router.post('/', (req, res) => {
     const post = req.body;
     const queryText = `INSERT INTO "posts" ("description", "path")
