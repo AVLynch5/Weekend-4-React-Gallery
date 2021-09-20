@@ -4,7 +4,7 @@
 CREATE TABLE "posts" (
 	"id" SERIAL PRIMARY KEY,
 	"description" VARCHAR(80) NOT NULL,
-	"path" VARCHAR(80) NOT NULL,
+	"path" VARCHAR(180) NOT NULL,
 	"likes" INTEGER DEFAULT 0
 );
 
