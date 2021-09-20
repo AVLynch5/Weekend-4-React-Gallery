@@ -22,8 +22,8 @@ function GalleryForm({addPost, setNewPostDescription, setNewPostPath, newPostDes
         <div className="galleryform-container">
             {/* On button click, handleAddPost called. Info entered into text fields sent to DB. Textfield required props mean inputs must be filled out.  */}
             <form onSubmit={handleAddPost}>
-                <TextField required size="small" value={newPostDescription} id="description" label="Image Description" onChange={(event) => setNewPostDescription(event.target.value)}/>
-                <TextField required size="small" value={newPostPath} id="path" label="Image Path" onChange={(event) => setNewPostPath(event.target.value)}/>
+                <TextField required size="small" value={newPostDescription} id="description" label="Image Description" type="text" onChange={(event) => setNewPostDescription(event.target.value)}/>
+                <TextField required size="small" value={newPostPath} id="path" label="Image Path" type="url" onChange={(event) => setNewPostPath(event.target.value)}/>
                 <Button style={{height: 39}} variant="contained" endIcon={<AddCircleIcon fontSize="small"/>} type="submit">Add Post</Button>
             </form>
         </div>
