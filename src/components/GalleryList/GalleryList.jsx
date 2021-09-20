@@ -1,7 +1,9 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
+//MUI
 import Grid from '@mui/material/Grid';
 
 function GalleryList({list, deletePost, putLikePost}) {
+    //rendered on the DOM
     return(
         <>
             <div className="Subheader">
