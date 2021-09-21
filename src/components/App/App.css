@@ -3,16 +3,18 @@
   margin: 0;
   padding: 0;
   font-family: 'Balsamiq Sans';
+  background: rgb(158,136,252);
+  background: linear-gradient(90deg, rgba(158,136,252,1) 5%, rgba(140,207,255,1) 85%);
 }
 
 .App-header {
-  background-color: #222;
-  padding: 1em;
+  background-color: #888AFC;
+  padding: 0.25em;
   color: white;
   margin-bottom: 1em;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 32pt;
 }
 

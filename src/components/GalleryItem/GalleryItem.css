@@ -12,3 +12,7 @@
     align-items: center;
     justify-content: center;
 }
+
+.post-container {
+    background: white;
+}
