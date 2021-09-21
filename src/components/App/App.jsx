@@ -8,6 +8,8 @@ import GalleryForm from '../GalleryForm/GalleryForm';
 import GalleryList from '../GalleryList/GalleryList';
 //MUI
 import Container from '@mui/material/Container';
+//font
+import '@fontsource/balsamiq-sans/400-italic.css'; // Select either normal or italic.
 
 function App() {
 

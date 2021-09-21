@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@fontsource/balsamiq-sans": "^4.5.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
     "axios": "^0.19.2",
