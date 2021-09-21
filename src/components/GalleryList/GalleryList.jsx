@@ -20,7 +20,9 @@ function GalleryList({list, deletePost, putLikePost}) {
                     {list.map(post => 
                         <Grid
                             item
-                            xs={3}
+                            lg={3}
+                            md={6}
+                            xs={12}
                             key={post.id}
                         >
                             <GalleryItem
