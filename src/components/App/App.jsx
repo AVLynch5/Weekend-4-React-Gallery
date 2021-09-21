@@ -83,7 +83,7 @@ function App() {
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       {/* MUI container SHOULD center contents horizontally - flexbox. sx param - automatic margins */}
-      <Container sx={{mx: 'auto'}}>
+      <Container>
         {/* Calls GalleryList component containing .map and elements to be rendered. Calls required props */}
         <GalleryList
           list={postList}
