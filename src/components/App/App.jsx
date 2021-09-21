@@ -100,6 +100,7 @@ function App() {
           newPostDescription={newPostDescription}
           newPostPath={newPostPath}
         />
+        <br/>
       </Container>
     </div>
   );
