@@ -2,3 +2,7 @@
     display: block;
     margin: 0 auto;
 }
+
+.subheader-title {
+    font-size: 18pt;
+}
