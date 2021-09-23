@@ -18,19 +18,19 @@ function GalleryList({list, deletePost, putLikePost}) {
                     spacing={2}
                 >
                     {list.map(post => 
-                        <Grid
-                            item
-                            lg={3}
-                            md={6}
-                            xs={12}
-                            key={post.id}
-                        >
+                        //<Grid
+                            //item
+                            //lg={3}
+                            //md={6}
+                            //xs={12}
+                            //key={post.id}
+                        //>
                             <GalleryItem
                             post={post}
                             putLikePost={putLikePost}
                             deletePost={deletePost}
                             />
-                        </Grid>
+                        //</Grid>
                     )}
                 </Grid>
             </div>

@@ -1,12 +1,13 @@
 .image-sizing {
-    max-height: 200px;
+    min-height: 170px;
+    max-height: 210px;
     width: auto;
-    max-width: 200px;
+    max-width: 240px;
 }
 
 .post-content {
-    height: 200px;
-    width: auto;
+    height: 210px;
+    width: 240;
     display:flex;
     word-wrap: break-word;
     align-items: center;
@@ -15,4 +16,5 @@
 
 .post-container {
     background: white;
+    margin: 10px;
 }
